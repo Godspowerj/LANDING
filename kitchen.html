@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Flexbox toturials</title>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+     <style>
+      *{
+         margin: 0;
+         padding: 0;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+        .container{
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(207, 84, 53, 0.7)), url(/image\ for\ kitchen.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-bottom: 10px;
+        }
+        nav{
+         padding: 20px;
+         background-color: white;
+         display: flex;
+         justify-content: space-between;
+        }
+        nav span img{
+          display:none;
+        }
+        ul{
+         padding: 0;
+         display: flex;
+         align-items: center;
+         justify-content: flex-end;
+        }
+        ul li a{
+         text-decoration: none;
+         list-style-type: none;
+         padding: 20px;
+         color: black;
+        }
+        ul li{
+         list-style-type: none;
+        }
+        .sub{
+         margin-top: 20%;
+         margin-left: 10%;
+         color: white;
+        }
+        .sub h1{
+         font-size: 70px;
+        }
+        .sub p{
+         color: whitesmoke;
+         line-height: 22px;
+        }
+         button{
+         padding:6px 30px;
+         margin-top: 10px;
+         font-size: 15px;
+         font-weight: bold;
+         border: none;
+         background-color: white;
+         color: black;
+         border-radius: 20px;
+        }
+         ul input{
+          width: 500px;
+          padding: 8px;
+          border-radius: 20px;
+          border:2px solid lightgrey;
+          margin-left: 150px;
+        }
+        nav img{
+         width: 30px;
+         position: relative;
+         right: 50px;
+        }
+        ul li img{
+         position: relative;
+         right: 10px;
+        }
+        nav span{
+         font-weight: bolder;
+         font-size: 25px;
+         color: brown;
+        }
+        .wrapper{
+          width: 100%;
+          margin: auto;
+          text-align: center;
+          margin-top:0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 100px;
+          margin-top: 100px;
+        }
+        .text-head{
+         text-align: left;
+        }
+        .text-head h2{
+         margin-bottom: 20px;
+         color: brown;
+         line-height: 22px;
+        }
+        .text-head button{
+          margin-top: 10px;
+          background-color: brown;
+          color: white;
+          padding: 10px 30px;
+        }
+        .wrapper img{
+         width: 400px;
+        }
+    
+        .foryou{
+         text-align: center;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         gap: 30px;
+         margin-top: 3%;
+        }
+        .foryou img{
+          width: 200px;
+        }
+        .Testimonies{
+         display: flex;
+         justify-content: center;
+         gap: 70px;
+         align-items: center;
+        }
+        .Testimonies h4{
+          font-size: 15px;
+        }
+        .me{
+         background-color: white;
+         box-shadow: 0px 2px 5px;
+         padding: 20px 20px;
+         border-radius: 10px;
+         margin-top: 10%;
+        }
+        .me p{
+         line-height: 22px;
+        }
+        .me img{
+          border-radius: 500px;
+          width: 30px;
+          margin-top: 5%;
+          padding: 10px;
+        }
+        .me h4{
+         padding: 10px 0;
+        }
+        .me span{
+          color: brown;
+        }
+        .our{
+         text-align: center;
+         margin-top: 7%;
+        }
+        .our h3{
+           margin: 10px 20px;
+           color: brown;
+        }
+        .best{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         margin-top: 5%;
+         gap: 30px;
+        }
+        .we{
+         background-color: transparent;
+         padding: 25px 15px;
+         border-radius: 8px;
+        }
+       
+        .we h4{
+         text-align: center;
+         font-size: 15px;
+         font-weight: bold;
+        }
+        .we p{
+          text-align: center;
+        }
+        .we span{
+           margin-left:25px ;
+          font-size: 50px;
+          padding: 20px 100px;
+          color: brown;
+        }
+        .we span:hover{
+          transform: scale(2 ,2);
+        }
+        footer{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 30px;
+          margin-top: 8%;
+          background-color: black;
+          padding: 30px 20px;
+        }
+        .foot{
+          align-items: center;
+        }
+        .foot h4{
+          color:  brown;
+          padding: 10px 0;
+          font-size: 20px;
+        }
+        .foot p{
+          color: white;
+        }
+        .foot input{
+          border-radius: 20px;
+          padding: 10px 10px;
+          border: none;
+        }
+         @media screen and (max-width: 600px) {
+           .container{
+           max-width: 100%;
+           }
+           nav{
+            background-color: white;
+           }
+           nav span{
+            font-size: 20px;
+           }
+            nav span img{
+            display:block;
+            font-size: 10%;
+           }
+          
+          nav input{
+              display: none;
+            }
+            nav ul li{
+              display: none;
+            }
+            ul img{
+              display:none;
+            }
+            .sub{
+              margin-left: 5%;
+              padding: 0 20px;
+            }
+            
+            .sub h1{
+              font-size: 50px;
+            }
+          
+            .wrapper{
+              display: block;
+            }
+            .our{
+              display: block;
+            }
+            .our p{
+              line-height: 20px;
+            }
+                
+            .best{
+              display: block;
+              margin: 0 40px;
+              text-align: center;
+            }
+           
+            .foryou{
+              display: block;
+            }
+            .foryou img{
+              width: 150px;
+              padding: 20px;
+            }
+            .Testimonies{
+              display: block;
+            }
+            footer{
+              display: block;
+            }
+            .text-head{
+              text-align: center;
+              margin-bottom: 40px;
+            }
+            .text-head p{
+              padding: 0 20px;
+            }
+            .text-head button{
+              margin-top: 25px;
+            }
+            .wrapper img{
+             width: 200px;
+            }
+           
+             .our{
+              margin-bottom: 40px;
+             }
+             .our p{
+              font-size: 15px;
+              padding: 0 20px;
+             }
+             .Testimonies{
+              padding: 0 20px;
+             }
+             .foot{
+              padding: 20px 20px;
+             }
+             .foot h4{
+              font-size: 15px;
+             }
+             .we span{
+              margin:auto ;
+             }
+         }   
+        
+
+     </style>
+</head>
+<body>
+   <header>
+      <div class="container">
+        <nav>
+         <ul>
+            <span>DESPIRADO</span>
+         </ul>
+         <ul>
+           <input type="search" placeholder="search"> <img src="/search icon.jpg" alt="">
+         </ul>
+         <ul>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">sign-up</a></li>
+            <li><a href="">login</a></li>
+            <li><a href=""><img src="/shopping_cart_FILL0_wght400_GRAD0_opsz24.png" alt=""></a></li>
+         </ul>
+         <span><img src="menu_icon-removebg-preview.png" alt=""></span>
+        </nav>
+        <div class="sub">
+         <h1>Exploring<br> The Heart Of Your Home</h1>
+         <p>Savor the fusion where innovation meets tradition in every dish</p>
+         <button>Learn More</button>
+        </div>
+     
+      </div>
+   </header>  
+
+   <section>
+      <div class="wrapper">
+         <div class="text-head">
+            <h2>WHO WE ARE?</h2>
+            <P>Lorem ipsum, dolor sit amet consectetur<br> adipisicing elit.<br>Placeat porro ipsa,
+                perspiciatis sunt dolore dolores dicta<br> culpa accusantium necessitatibus laborum
+                inventore sint<br> cupiditate nisi, ipsam magnam vitae voluptatem animi cumque.
+                <br><br>
+                culpa accusantium necessitatibus laborum
+                inventore sint<br> cupiditate nisi, ipsam magnam vitae voluptatem animi cumque.
+            </P>
+            <button>Read more</button>
+         </div>
+         <img src="/1960e5c6d7419c386ac4442ac0c6e0fc-removebg-preview.png" alt="">
+      </div>
+   </section>
+     
+     <section>
+      <div class="our">
+       <h3>OUR BEST SERVICE</h3>
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Similique natus eum eos 
+         velit eveniet quis fuga aut<br> harum architecto praesentium nobis mollitia dicta exercitationem corrupt<br>
+          </p>
+      </div>
+      <div class="best">
+         <div class="we">
+          <span class="material-symbols-outlined">
+            public
+            </span>
+            <h4>THE BEST WORLD SORT</h4>
+            <p>Lorem ipsum dolor, sit amet consectetur,<br>adipisicing elit. Quisquam similique</p>
+         </div>
+         <div  class="we">
+          <span class="material-symbols-outlined">
+            point_of_sale
+            </span>
+            <h4>MANY POINTS OF SALES</h4>
+            <p>Lorem ipsum dolor, sit amet consectetur,<br>adipisicing elit. Quisquam similique</p>
+         </div>
+         <div class="we">
+            <span class="material-symbols-outlined">
+             quickreply
+             </span>
+            <h4>24/7 FAST DELIVERY</h4>
+            <p>Lorem ipsum dolor, sit amet consectetur,<br>adipisicing elit. Quisquam similique</p>
+         </div>
+      </div>
+     </section>
+
+
+
+
+   <section>
+      <h3 style="text-align: center; margin-top: 100px;color: brown;">For You</h3>
+   <div class="foryou">
+       <div>
+         <img src="https://i.pinimg.com/236x/ff/7c/81/ff7c8173f5d62423eee52caa221aa6b0.jpg" alt="">
+       </div>
+       <div>
+         <img src="https://i.pinimg.com/236x/b9/bc/13/b9bc13e6c3c3aa4e5aaad55fd701653a.jpg" alt="">
+       </div>
+       <div>
+         <img src="https://i.pinimg.com/236x/97/58/8e/97588ece72b36b4d0652c6b58ca4cb7a.jpg" alt="">
+       </div>
+       <div>
+         <img src="https://i.pinimg.com/236x/08/56/80/085680c9ada2b7cf4111b197dadd0420.jpg" alt="">
+       </div>
+   </div>
+   </section>
+
+   <h2 style="text-align: center; color: brown; margin-top: 7%;">Testimonies</h2>
+   <div class="Testimonies">
+       <div class="me">
+         <img src="/kitchen cover.jpg" alt="">
+          <h4>Kenneth Thomas</h4>
+          <span class="material-symbols-outlined">
+            star
+            </span><span class="material-symbols-outlined">
+              star
+              </span><span class="material-symbols-outlined">
+                star </span><span class="material-symbols-outlined">
+                  star_half
+                  </span>
+             
+           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.<br> Natus suscipit
+             ipsa dolores hic, architecto cupiditate.ta.<br>Natus suscipit
+             ipsa dolores hic, architecto cupiditate.ta.</p>
+         </div>
+         <div class="me">
+            <img src="/kitchen cover 2.jpg" alt="">
+            <h4>Lilian Matt</h4>
+            <span class="material-symbols-outlined">
+              star
+              </span><span class="material-symbols-outlined">
+                star
+                </span><span class="material-symbols-outlined">
+                  star </span><span class="material-symbols-outlined">
+                    star_half
+                    </span>
+                  
+               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.<br> Natus suscipit
+                  ipsa dolores hic, architecto cupiditate.ta.<br>Natus suscipit
+                  ipsa dolores hic, architecto cupiditate.ta.</p>
+            </div>
+        </div>
+   </div>
+ <footer>
+     <div class="foot">
+      <h4>DESPIRADO</h4>
+      <p>Lorem ipsum dolor sit amet consectetur,<br> 
+         Molestias nobis iusto eligendi tempori<br> 
+         Laudantium nobis rerum <br>
+        culpa voluptatibus nulla place</p>
+     </div>
+     <div class="foot">
+      <h4>Email</h4>
+      <p>godspjoan27@gmail.com</p>
+      </div>
+      <div class="foot">
+      <h4>Address</h4>
+      <p>Lorem ipsum dolor sit amet consectetur,<br> 
+         Molestias nobis iusto eligendi tempori<br><br> 
+         Laudantium nobis rerum <br>
+        culpa voluptatibus nulla place</p>
+     </div>
+     <div class="foot">
+      <h4>Phone</h4>
+     <p> 07083009249</p>
+     <p> 09152149370</p>
+     </div>
+     <div class="foot">
+      <h4>Follow us</h4>
+      <input type="text" placeholder="Type your email">
+
+     </div>
+ </footer>
+</body>
+</html>
